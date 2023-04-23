@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Arch Linux - Tag - My New Hugo Site</title>
+        <title>Arch Linux - Tag - My Notes</title>
         <link>https://lineartree.github.io/tags/arch-linux/</link>
-        <description>Arch Linux - Tag - My New Hugo Site</description>
+        <description>Arch Linux - Tag - My Notes</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 22 Apr 2023 22:41:20 &#43;0800</lastBuildDate><atom:link href="https://lineartree.github.io/tags/arch-linux/" rel="self" type="application/rss+xml" /><item>
     <title>Archlinux notes</title>
     <link>https://lineartree.github.io/archlinux_notes/</link>

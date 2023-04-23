@@ -1,9 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - My New Hugo Site</title>
+        <title>All Posts - My Notes</title>
         <link>https://lineartree.github.io/posts/</link>
-        <description>All Posts | My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 22 Apr 2023 22:41:20 &#43;0800</lastBuildDate><atom:link href="https://lineartree.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <description>All Posts | My Notes</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 23 Apr 2023 22:34:16 &#43;0800</lastBuildDate><atom:link href="https://lineartree.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Build Blog with Hugo</title>
+    <link>https://lineartree.github.io/build_blog_with_hugo/</link>
+    <pubDate>Sun, 23 Apr 2023 22:34:16 &#43;0800</pubDate><author>
+        <name>Lineartree</name>
+    </author><guid>https://lineartree.github.io/build_blog_with_hugo/</guid>
+    <description><![CDATA[<p>Build a blog with Hugo and DoIt theme.</p>]]></description>
+</item><item>
     <title>Archlinux notes</title>
     <link>https://lineartree.github.io/archlinux_notes/</link>
     <pubDate>Sat, 22 Apr 2023 22:41:20 &#43;0800</pubDate><author>
