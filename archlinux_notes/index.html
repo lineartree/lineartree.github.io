@@ -1,0 +1,1391 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Archlinux notes - My New Hugo Site</title><meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="Archlinux notes" />
+<meta property="og:description" content="Some notes about Arch Linux." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lineartree.github.io/archlinux_notes/" /><meta property="og:image" content="https://lineartree.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-22T22:41:20+08:00" />
+<meta property="article:modified_time" content="2023-04-22T22:41:20+08:00" /><meta property="og:site_name" content="My New Hugo Site" />
+<meta property="og:see_also" content="https://lineartree.github.io/archlinux_installation/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://lineartree.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Archlinux notes"/>
+<meta name="twitter:description" content="Some notes about Arch Linux."/>
+<meta name="application-name" content="DoIt">
+<meta name="apple-mobile-web-app-title" content="DoIt">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://lineartree.github.io/archlinux_notes/" /><link rel="prev" href="https://lineartree.github.io/archlinux_installation/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Archlinux notes",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/lineartree.github.io\/archlinux_notes\/"
+        },"genre": "posts","keywords": "Arch Linux","wordcount":  1530 ,
+        "url": "https:\/\/lineartree.github.io\/archlinux_notes\/","datePublished": "2023-04-22T22:41:20+08:00","dateModified": "2023-04-22T22:41:20+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Lineartree"
+            },"description": ""
+    }
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('dark' === 'light' || 'dark' === 'dark' || 'dark' === 'black') setTheme('dark'), saveTheme('dark'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/series/"> Series </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search Titles or Contents" id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" class="menu-item theme-select" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="Switch Theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="black">Black</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search Titles or Contents" id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/series/" title="">Series</a><a href="#" class="menu-item theme-select" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="Switch Theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="black">Black</option>
+                    <option value="auto">Auto</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#archlinux-installation">Archlinux Installation</a></li>
+    <li><a href="#change-console-fonts">Change Console Fonts</a></li>
+    <li><a href="#chrome-fonts">Chrome Fonts</a></li>
+    <li><a href="#ibus-chewing">ibus-chewing</a></li>
+    <li><a href="#whitesur-theme">WhiteSur Theme</a></li>
+    <li><a href="#adjust-brightness">Adjust Brightness</a></li>
+    <li><a href="#click-to-minimize-menu">Click to Minimize Menu</a></li>
+    <li><a href="#neovim">Neovim</a></li>
+    <li><a href="#play-videos">Play Videos</a></li>
+    <li><a href="#vim">Vim</a></li>
+    <li><a href="#opengl">OpenGL</a></li>
+    <li><a href="#chmod">chmod</a></li>
+    <li><a href="#alacritty--fish--tmux">Alacritty + fish + tmux</a>
+      <ul>
+        <li><a href="#fish-shell">Fish Shell</a></li>
+        <li><a href="#alacritty">Alacritty</a></li>
+        <li><a href="#tmux">tmux</a></li>
+      </ul>
+    </li>
+    <li><a href="#enable-gtk-theme">Enable gtk Theme</a></li>
+    <li><a href="#i3-config">i3 config</a>
+      <ul>
+        <li><a href="#map-caps-lock-to-ctrl">Map Caps Lock to Ctrl</a></li>
+        <li><a href="#ibus">ibus</a></li>
+        <li><a href="#i3-adjust-brightness">i3 Adjust Brightness</a></li>
+      </ul>
+    </li>
+    <li><a href="#polybar-requisites">Polybar Requisites</a></li>
+    <li><a href="#polybar-wlan-and-eth">Polybar wlan and eth</a>
+      <ul>
+        <li><a href="#wlan">wlan</a></li>
+        <li><a href="#eth">eth</a></li>
+      </ul>
+    </li>
+    <li><a href="#disk-usage-analyzer">Disk Usage Analyzer</a></li>
+    <li><a href="#virt-manager">Virt-manager</a></li>
+    <li><a href="#thunar">Thunar</a></li>
+    <li><a href="#vmware-ubuntu">Vmware Ubuntu</a>
+      <ul>
+        <li><a href="#shared-folders">Shared Folders</a></li>
+        <li><a href="#opengl--glfw">Opengl + glfw</a></li>
+        <li><a href="#3d-acceleration">3D Acceleration</a></li>
+      </ul>
+    </li>
+    <li><a href="#qt5ct">qt5ct</a></li>
+    <li><a href="#convert-video-format">Convert Video Format</a></li>
+    <li><a href="#yt-dlp">yt-dlp</a></li>
+    <li><a href="#repeat-key-speed">Repeat Key Speed</a></li>
+    <li><a href="#authentication-agent">Authentication Agent</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Archlinux notes</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Lineartree</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/arch-linux/"><i class="far fa-folder fa-fw"></i>Arch Linux</a></span>&nbsp;<span class="post-category">and</span>&nbsp;<span class="post-series">series <a href="/series/archlinux-installation/"><i class="far fa-list-alt fa-fw"></i>Arch Linux Installation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-22">2023-04-22</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-04-22">2023-04-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1530 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details series-nav open">
+                                <div class="details-summary series-title">
+                                    <span>Series - Arch Linux Installation</span>
+                                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                                </div>
+                                <div class="details-content series-content">
+                                    <nav>
+                                        <ul><li><span class="active">Archlinux notes</span></li>
+                                                    <li><a href="/archlinux_installation/">Arch Linux Installation</a></li></ul>
+                                    </nav>
+                                </div>
+                            </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#archlinux-installation">Archlinux Installation</a></li>
+    <li><a href="#change-console-fonts">Change Console Fonts</a></li>
+    <li><a href="#chrome-fonts">Chrome Fonts</a></li>
+    <li><a href="#ibus-chewing">ibus-chewing</a></li>
+    <li><a href="#whitesur-theme">WhiteSur Theme</a></li>
+    <li><a href="#adjust-brightness">Adjust Brightness</a></li>
+    <li><a href="#click-to-minimize-menu">Click to Minimize Menu</a></li>
+    <li><a href="#neovim">Neovim</a></li>
+    <li><a href="#play-videos">Play Videos</a></li>
+    <li><a href="#vim">Vim</a></li>
+    <li><a href="#opengl">OpenGL</a></li>
+    <li><a href="#chmod">chmod</a></li>
+    <li><a href="#alacritty--fish--tmux">Alacritty + fish + tmux</a>
+      <ul>
+        <li><a href="#fish-shell">Fish Shell</a></li>
+        <li><a href="#alacritty">Alacritty</a></li>
+        <li><a href="#tmux">tmux</a></li>
+      </ul>
+    </li>
+    <li><a href="#enable-gtk-theme">Enable gtk Theme</a></li>
+    <li><a href="#i3-config">i3 config</a>
+      <ul>
+        <li><a href="#map-caps-lock-to-ctrl">Map Caps Lock to Ctrl</a></li>
+        <li><a href="#ibus">ibus</a></li>
+        <li><a href="#i3-adjust-brightness">i3 Adjust Brightness</a></li>
+      </ul>
+    </li>
+    <li><a href="#polybar-requisites">Polybar Requisites</a></li>
+    <li><a href="#polybar-wlan-and-eth">Polybar wlan and eth</a>
+      <ul>
+        <li><a href="#wlan">wlan</a></li>
+        <li><a href="#eth">eth</a></li>
+      </ul>
+    </li>
+    <li><a href="#disk-usage-analyzer">Disk Usage Analyzer</a></li>
+    <li><a href="#virt-manager">Virt-manager</a></li>
+    <li><a href="#thunar">Thunar</a></li>
+    <li><a href="#vmware-ubuntu">Vmware Ubuntu</a>
+      <ul>
+        <li><a href="#shared-folders">Shared Folders</a></li>
+        <li><a href="#opengl--glfw">Opengl + glfw</a></li>
+        <li><a href="#3d-acceleration">3D Acceleration</a></li>
+      </ul>
+    </li>
+    <li><a href="#qt5ct">qt5ct</a></li>
+    <li><a href="#convert-video-format">Convert Video Format</a></li>
+    <li><a href="#yt-dlp">yt-dlp</a></li>
+    <li><a href="#repeat-key-speed">Repeat Key Speed</a></li>
+    <li><a href="#authentication-agent">Authentication Agent</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Some notes about Arch Linux.</p>
+<h2 id="archlinux-installation" class="headerLink">
+    <a href="#archlinux-installation" class="header-mark"></a>Archlinux Installation</h2><p>arch installation
+<a href="https://itsfoss.com/install-arch-linux/" target="_blank" rel="noopener noreferrer">https://itsfoss.com/install-arch-linux/</a></p>
+<h2 id="change-console-fonts" class="headerLink">
+    <a href="#change-console-fonts" class="header-mark"></a>Change Console Fonts</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /usr/share/kbd/consolefonts/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -Syu terminus-font
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setfont ter-d20b.psf.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>set it permanent, in <code>/etc/vconsole.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">FONT</span><span class="o">=</span><span class="s">ter-d20b.psf.gz</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="chrome-fonts" class="headerLink">
+    <a href="#chrome-fonts" class="header-mark"></a>Chrome Fonts</h2><p>install Microsoft fonts</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S ttf-ms-win10-auto
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>noto-cjk</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S noto-fonts-cjk
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>AR PL UMing TW</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">yay -S adobe-source-han-sans-tw-font
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Source Han Sans TW</p>
+<p>go to chrome settings -&gt; Appearance -&gt; Customize fonts and select Arial</p>
+<p><figure><a class="lightgallery" href="./chrome_setfont.png" title="set chrome font" data-thumbnail="./chrome_setfont.png">
+        <img
+            
+            loading="lazy"
+            src="./chrome_setfont.png"
+            srcset="./chrome_setfont.png, ./chrome_setfont.png 1.5x, ./chrome_setfont.png 2x"
+            sizes="auto"
+            alt="./chrome_setfont.png">
+    </a></figure></p>
+<h2 id="ibus-chewing" class="headerLink">
+    <a href="#ibus-chewing" class="header-mark"></a>ibus-chewing</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S ibus ibus-chewing
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>settings</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ibus-setup
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>/etc/locale.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">LANG</span><span class="o">=</span><span class="s">en_US.UTF-8</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>/etc/locale.gen</code>
+uncomment this line</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">zh_TW.UTF-8 UTF-8</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>and do</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo locale-gen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>~./bashrc</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">export GTK_IM_MODULE</span><span class="o">=</span><span class="s">ibus</span>
+</span></span><span class="line"><span class="cl"><span class="na">export QT_IM_MODULE</span><span class="o">=</span><span class="s">ibus</span>
+</span></span><span class="line"><span class="cl"><span class="na">export XMODIFIERS</span><span class="o">=</span><span class="s">@im=ibus</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>log out and log in</p>
+<h2 id="whitesur-theme" class="headerLink">
+    <a href="#whitesur-theme" class="header-mark"></a>WhiteSur Theme</h2><p><a href="https://wiki.gnome.org/action/show/Projects/GnomeShellIntegration/Installation?action=show&amp;redirect=Projects%2FGnomeShellIntegrationForChrome%2FInstallation" target="_blank" rel="noopener noreferrer">https://wiki.gnome.org/action/show/Projects/GnomeShellIntegration/Installation?action=show&redirect=Projects%2FGnomeShellIntegrationForChrome%2FInstallation</a></p>
+<p>shell theme
+<a href="https://extensions.gnome.org/extension/19/user-themes/" target="_blank" rel="noopener noreferrer">https://extensions.gnome.org/extension/19/user-themes/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://aur.archlinux.org/gnome-browser-connector.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> gnome-browser-connector
+</span></span><span class="line"><span class="cl">makepkg -si
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>gtk theme</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S whitesur-gtk-theme
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>icon theme</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S whitesur-icon-theme
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>and then go to gnome tweaks</p>
+<h2 id="adjust-brightness" class="headerLink">
+    <a href="#adjust-brightness" class="header-mark"></a>Adjust Brightness</h2><p>install xorg</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xorg
+</span></span><span class="line"><span class="cl">sudo pacman -S xorg-xinit xorg-twm xorg-xclock xterm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">startx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>use xrandr</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">xrandr --current
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">xrandr --output HDMI-2 --brightness 0.5
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>go to settings -&gt; keyboard -&gt; keyboard shortcuts to config</p>
+<p>in keyboard section, change the <code>Alternative Characters Key</code> from <code>Alt</code> to <code>Right Super</code> to use right alt key</p>
+<h2 id="click-to-minimize-menu" class="headerLink">
+    <a href="#click-to-minimize-menu" class="header-mark"></a>Click to Minimize Menu</h2><p>install dash-to-dock
+<a href="https://extensions.gnome.org/extension/307/dash-to-dock/" target="_blank" rel="noopener noreferrer">https://extensions.gnome.org/extension/307/dash-to-dock/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://aur.archlinux.org/gnome-browser-connector.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> gnome-browser-connector/
+</span></span><span class="line"><span class="cl">makepkg -si
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>go to dash-to-dock setting</p>
+<p>Behavior -&gt; Click Action -&gt; Minimize</p>
+<h2 id="neovim" class="headerLink">
+    <a href="#neovim" class="header-mark"></a>Neovim</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ping github.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>if it stucked then
+check this site to get github ip:
+<a href="https://www.ipaddress.com/site/github.com" target="_blank" rel="noopener noreferrer">https://www.ipaddress.com/site/github.com</a></p>
+<p>copy the ip to /etc/hosts:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">140.82.114.3 github.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="play-videos" class="headerLink">
+    <a href="#play-videos" class="header-mark"></a>Play Videos</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S ffmpeg
+</span></span><span class="line"><span class="cl">sudo pacman -S gst-plugins-good
+</span></span><span class="line"><span class="cl">sudo pacman -S gst-libav
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>install mpv player</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S mpv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="vim" class="headerLink">
+    <a href="#vim" class="header-mark"></a>Vim</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S vim-plug
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in vim:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">PlugInstall</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>install ycm</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S cmake
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.vim/plugged/youcompleteme
+</span></span><span class="line"><span class="cl">./install.py --clang-completer  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="opengl" class="headerLink">
+    <a href="#opengl" class="header-mark"></a>OpenGL</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S glfw-x11
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="chmod" class="headerLink">
+    <a href="#chmod" class="header-mark"></a>chmod</h2><p>only directories</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find * -type d -exec chmod <span class="m">755</span> <span class="o">{}</span> +
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>only files</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find * -type f -exec chmod <span class="m">644</span> <span class="o">{}</span> +
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>use fd to batch process, use <code>-X</code> instead of <code>-x</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fd -t d -X chmod <span class="m">755</span> <span class="o">{}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fd -t f -X chmod <span class="m">644</span> <span class="o">{}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="alacritty--fish--tmux" class="headerLink">
+    <a href="#alacritty--fish--tmux" class="header-mark"></a>Alacritty + fish + tmux</h2><h3 id="fish-shell" class="headerLink">
+    <a href="#fish-shell" class="header-mark"></a>Fish Shell</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install <span class="p">|</span> fish
+</span></span><span class="line"><span class="cl">omf theme
+</span></span><span class="line"><span class="cl">omf install eclm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>~/.config/fish</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">if status is-interactive</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Commands to run in interactive sessions can go here</span>
+</span></span><span class="line"><span class="cl">    <span class="na">set -U fish_greeting &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="na">fish_vi_key_bindings</span>
+</span></span><span class="line"><span class="cl">    <span class="na">bind -M insert -m default jk backward-char force-repaint</span>
+</span></span><span class="line"><span class="cl">    <span class="na">bind -M insert -m insert \cf accept-autosuggestion force-repaint</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="na">function fish_mode_prompt</span>
+</span></span><span class="line"><span class="cl">      <span class="c1"># NOOP - Disable vim mode indicator</span>
+</span></span><span class="line"><span class="cl">    <span class="na">end</span>
+</span></span><span class="line"><span class="cl">    <span class="na">set fish_cursor_default     block      </span>
+</span></span><span class="line"><span class="cl">    <span class="na">set fish_cursor_insert      line       </span>
+</span></span><span class="line"><span class="cl">    <span class="na">set fish_cursor_replace_one underscore </span>
+</span></span><span class="line"><span class="cl">    <span class="na">set fish_cursor_visual      block</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="na">set fish_cursor_unknown </span>
+</span></span><span class="line"><span class="cl"><span class="na">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="alacritty" class="headerLink">
+    <a href="#alacritty" class="header-mark"></a>Alacritty</h3><p>in <code>~/.config/alacritty/alacritty.yml</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">import</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span>- <span class="l">~/.config/alacritty/themes/themes/one_dark.yaml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">shell</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">program</span><span class="p">:</span><span class="w"> </span><span class="l">/usr/bin/fish</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">args</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- -<span class="l">l</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- -<span class="l">c</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;tmux&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">window</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">dimensions</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">columns</span><span class="p">:</span><span class="w"> </span><span class="m">136</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">lines</span><span class="p">:</span><span class="w"> </span><span class="m">36</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">padding</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">opacity</span><span class="p">:</span><span class="w"> </span><span class="m">0.8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">scrolling</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">history</span><span class="p">:</span><span class="w"> </span><span class="m">100000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">multiplier</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">autoscroll</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">font</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">normal</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l">BlexMono Nerd Font Mono</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l">Regular</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">bold</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l">BlexMono Nerd Font Mono</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l">Bold</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">italic</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l">BlexMono Nerd Font Mono</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l">Italic</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">bold_italic</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">family</span><span class="p">:</span><span class="w"> </span><span class="l">BlexMono Nerd Font Mono</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="l">Bold Italic</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="m">12.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># offset:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   x: 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   y: 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">draw_bold_text_with_bright_colors</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">key_bindings</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- {<span class="w"> </span><span class="nt">key: F11, action</span><span class="p">:</span><span class="w"> </span><span class="l">ToggleFullscreen }</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="tmux" class="headerLink">
+    <a href="#tmux" class="header-mark"></a>tmux</h3><p>install tpm</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>~/.tmux.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">set -g @plugin &#39;tmux-plugins/tpm&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="na">set -g @plugin &#39;wfxr/tmux-power&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">set-option -g default-shell /usr/bin/fish</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># kill sessions automatically</span>
+</span></span><span class="line"><span class="cl"><span class="na">set-option -g destroy-unattached</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">set -g @tmux_power_theme &#39;moon&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># send prefix</span>
+</span></span><span class="line"><span class="cl"><span class="na">set-option -g prefix C-a</span>
+</span></span><span class="line"><span class="cl"><span class="na">unbind-key C-a</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind-key C-a send-prefix</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># use Alt-arrow keys to switch panes</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind -n M-Left select-pane -L</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind -n M-Right select-pane -R</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind -n M-Up select-pane -U</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind -n M-Down select-pane -D</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># Shift arrow to switch windows</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind -n S-Left previous-window</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind -n S-Right next-window</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># mouse mode</span>
+</span></span><span class="line"><span class="cl"><span class="na">setw -g mouse on</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># set easier window split keys</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind-key v split-window -h</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind-key h split-window -v</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># easy config reload</span>
+</span></span><span class="line"><span class="cl"><span class="na">bind-key r source-file ~/.tmux.conf \; display-message &#34;~/.tmux.conf reloaded.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">run &#39;~/.tmux/plugins/tpm/tpm&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>reload <code>.tmux.conf</code>
+and press <code>prefix</code> + <code>I</code>(Capital i) to install plugins</p>
+<p>kill all tmux windows</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tmux kill-server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>enter vi mode</p>
+<p><code>prefix</code> + <code>[</code></p>
+<p>quit vi mode</p>
+<p><code>q</code></p>
+<h2 id="enable-gtk-theme" class="headerLink">
+    <a href="#enable-gtk-theme" class="header-mark"></a>Enable gtk Theme</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S lxappearance
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="i3-config" class="headerLink">
+    <a href="#i3-config" class="header-mark"></a>i3 config</h2><h3 id="map-caps-lock-to-ctrl" class="headerLink">
+    <a href="#map-caps-lock-to-ctrl" class="header-mark"></a>Map Caps Lock to Ctrl</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># map caps lock to ctrl</span>
+</span></span><span class="line"><span class="cl"><span class="na">exec --no-startup-id setxkbmap -option ctrl:nocaps</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="ibus" class="headerLink">
+    <a href="#ibus" class="header-mark"></a>ibus</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># ibus-chewing</span>
+</span></span><span class="line"><span class="cl"><span class="na">exec --no-startup-id ibus-daemon -drxR</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="i3-adjust-brightness" class="headerLink">
+    <a href="#i3-adjust-brightness" class="header-mark"></a>i3 Adjust Brightness</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># adjust brightness</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Mod1+backslash exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 1</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindcode Mod1+35 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.9</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+8 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.8</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+7 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.7</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+6 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.6</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+5 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.5</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+4 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.4</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+3 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.3</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+2 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.2</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Ctrl+Shift+1 exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.1</span>
+</span></span><span class="line"><span class="cl"><span class="na">bindsym Mod1+comma exec xrandr --output $(xrandr --query | grep &#34; connected&#34; | cut -d&#34; &#34; -f1) --brightness 0.0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="polybar-requisites" class="headerLink">
+    <a href="#polybar-requisites" class="header-mark"></a>Polybar Requisites</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S rxvt-unicode
+</span></span><span class="line"><span class="cl">yay -S alsa-utils
+</span></span><span class="line"><span class="cl">yay -S mate-power-manager
+</span></span><span class="line"><span class="cl">sudo pacman -S git nitrogen rofi python-pip ttf-font-awesome adobe-source-code-pro-fonts binutils gcc make pkg-config fakeroot
+</span></span><span class="line"><span class="cl">yay -S ttf-font-awesome-5
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="polybar-wlan-and-eth" class="headerLink">
+    <a href="#polybar-wlan-and-eth" class="header-mark"></a>Polybar wlan and eth</h2><h3 id="wlan" class="headerLink">
+    <a href="#wlan" class="header-mark"></a>wlan</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span class="m">65536</span> qdisc noqueue state UNKNOWN mode DEFAULT group default qlen <span class="m">1000</span>
+</span></span><span class="line"><span class="cl">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span class="line"><span class="cl">2: enp3s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="m">1500</span> qdisc fq_codel state UP mode DEFAULT group default qlen <span class="m">1000</span>
+</span></span><span class="line"><span class="cl">    link/ether 9c:5c:8e:01:b2:d0 brd ff:ff:ff:ff:ff:ff
+</span></span><span class="line"><span class="cl">3: wlp2s0: &lt;BROADCAST,MULTICAST&gt; mtu <span class="m">1500</span> qdisc noop state DOWN mode DEFAULT group default qlen <span class="m">1000</span>
+</span></span><span class="line"><span class="cl">    link/ether 1e:58:da:19:71:42 brd ff:ff:ff:ff:ff:ff permaddr 7c:b0:c2:63:08:12
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>choose enp3s0</p>
+<h3 id="eth" class="headerLink">
+    <a href="#eth" class="header-mark"></a>eth</h3><p>install iwd for iwctl</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S iwd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>start iwd</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl start iwd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iwctl
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">device list
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>you will see:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># device list</span>
+</span></span><span class="line"><span class="cl">                                    Devices                                   *
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">  Name                  Address               Powered     Adapter     Mode
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">  wlan0                 3a:68:8f:72:6d:df     off          phy0       station
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>if it is powered off</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># adapter phy0 set-property Powered on</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>and run device list again</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># device list</span>
+</span></span><span class="line"><span class="cl">                                    Devices                                   *
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">  Name                  Address               Powered     Adapter     Mode
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">  wlan0                 3a:68:8f:72:6d:df     on          phy0        station
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># station wlan0 scan</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># station wlan0 get-networks</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>you will see network lists</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># station wlan0 get-networks</span>
+</span></span><span class="line"><span class="cl">                               Available networks
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">      Network name                      Security            Signal
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">  &gt;   IAN-2                             psk                 ****
+</span></span><span class="line"><span class="cl">      js-3F                             psk                 ****
+</span></span><span class="line"><span class="cl">      Media Control System              psk                 ****
+</span></span><span class="line"><span class="cl">      4FWDC20                           psk                 ****
+</span></span><span class="line"><span class="cl">      HP-Print-85-LaserJet <span class="m">1102</span>         open                ****
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>choose the network</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># station wlan0 connect IAN-2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>that&rsquo;s done</p>
+<p>next, install wireless_tools for iwconfig</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S wireless_tools
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iwconfig
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lo        no wireless extensions.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">enp3s0    no wireless extensions.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">wlan0     IEEE 802.11  ESSID:<span class="s2">&#34;IAN-2&#34;</span>
+</span></span><span class="line"><span class="cl">          Mode:Managed  Frequency:2.412 GHz  Access Point: 6C:19:8F:E1:65:44
+</span></span><span class="line"><span class="cl">          Bit <span class="nv">Rate</span><span class="o">=</span><span class="m">1</span> Mb/s   Tx-Power<span class="o">=</span><span class="m">22</span> dBm
+</span></span><span class="line"><span class="cl">          Retry short limit:7   RTS thr:off   Fragment thr:off
+</span></span><span class="line"><span class="cl">          Power Management:on
+</span></span><span class="line"><span class="cl">          Link <span class="nv">Quality</span><span class="o">=</span>56/70  Signal <span class="nv">level</span><span class="o">=</span>-54 dBm
+</span></span><span class="line"><span class="cl">          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+</span></span><span class="line"><span class="cl">          Tx excessive retries:0  Invalid misc:1   Missed beacon:0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>choose wlan0</p>
+<p>if you want to close the wifi:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span><span class="c1"># adapter phy0 set-property Powered off</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="disk-usage-analyzer" class="headerLink">
+    <a href="#disk-usage-analyzer" class="header-mark"></a>Disk Usage Analyzer</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S gdu
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="virt-manager" class="headerLink">
+    <a href="#virt-manager" class="header-mark"></a>Virt-manager</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S acpid
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="thunar" class="headerLink">
+    <a href="#thunar" class="header-mark"></a>Thunar</h2><p>generate user directories</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo pacman -S xdg-user-dirs
+</span></span><span class="line"><span class="cl">xdg-user-dirs-update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>generate trash directory</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">yay -S gvfs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>thumbnails</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo pacman -S tumbler
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="vmware-ubuntu" class="headerLink">
+    <a href="#vmware-ubuntu" class="header-mark"></a>Vmware Ubuntu</h2><h3 id="shared-folders" class="headerLink">
+    <a href="#shared-folders" class="header-mark"></a>Shared Folders</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o <span class="nv">uid</span><span class="o">=</span><span class="m">1000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="opengl--glfw" class="headerLink">
+    <a href="#opengl--glfw" class="header-mark"></a>Opengl + glfw</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install cmake meson libglfw3-dev pkg-config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo dpkg-reconfigure bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3d-acceleration" class="headerLink">
+    <a href="#3d-acceleration" class="header-mark"></a>3D Acceleration</h3><p>in <code>~/.vmware/preference</code>, add</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">mks.gl.allowBlacklistedDrivers</span> <span class="o">=</span> <span class="s">&#34;TRUE&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="qt5ct" class="headerLink">
+    <a href="#qt5ct" class="header-mark"></a>qt5ct</h2><p>in <code>/etc/environment</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">QT_QPA_PLATFORMTHEME</span><span class="o">=</span><span class="s">qt5ct</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="convert-video-format" class="headerLink">
+    <a href="#convert-video-format" class="header-mark"></a>Convert Video Format</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i test.webm -c copy test.mp4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="yt-dlp" class="headerLink">
+    <a href="#yt-dlp" class="header-mark"></a>yt-dlp</h2><p>download only audio</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yt-dlp --extract-audio <span class="s1">&#39;https://www.youtube.com/watch?v=&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>it will select opus format (default)</p>
+<p>if you want to select differnt format, use <code>--audio-format</code></p>
+<p>download only mp3</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">yt-dlp --extract-audio --audio-format mp3 &#39;https://www.youtube.com/watch?v=&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="repeat-key-speed" class="headerLink">
+    <a href="#repeat-key-speed" class="header-mark"></a>Repeat Key Speed</h2><p>in <code>~/.xinitrc</code></p>
+<p>xset r rate [delay] [rate]</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">xset r rate 200 20</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="authentication-agent" class="headerLink">
+    <a href="#authentication-agent" class="header-mark"></a>Authentication Agent</h2><p>run applications that need root permission, install lxsession</p>
+<p><a href="https://wiki.archlinux.org/title/Polkit" target="_blank" rel="noopener noreferrer">https://wiki.archlinux.org/title/Polkit</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S lxsession
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        
+
+
+<h2>Related Content</h2>
+<div class="related-container">
+    <div class="related-item-container">
+            <h2 class="related-title">
+                <a href="/archlinux_installation/">Arch Linux Installation</a>
+            </h2>
+        </div>
+    
+
+</div>
+
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-22</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/archlinux_notes/index.md target="_blank" rel="noopener noreferrer">Read markdown</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/arch-linux/">Arch Linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/archlinux_installation/" class="prev" rel="prev" title="Arch Linux Installation"><i class="fas fa-angle-left fa-fw"></i>Arch Linux Installation</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Lineartree</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":30},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

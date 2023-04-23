@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>installation - Tag - My New Hugo Site</title>
+        <link>https://lineartree.github.io/tags/installation/</link>
+        <description>installation - Tag - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 19 Apr 2023 19:09:19 &#43;0800</lastBuildDate><atom:link href="https://lineartree.github.io/tags/installation/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch Linux Installation</title>
+    <link>https://lineartree.github.io/archlinux_installation/</link>
+    <pubDate>Wed, 19 Apr 2023 19:09:19 &#43;0800</pubDate><author>
+        <name>Lineartree</name>
+    </author><guid>https://lineartree.github.io/archlinux_installation/</guid>
+    <description><![CDATA[<p>Arch Linux Installation Steps.</p>]]></description>
+</item></channel>
+</rss>

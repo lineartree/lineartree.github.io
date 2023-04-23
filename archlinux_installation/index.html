@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Arch Linux Installation - My New Hugo Site</title><meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="Arch Linux Installation" />
+<meta property="og:description" content="Arch Linux Installation Steps." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lineartree.github.io/archlinux_installation/" /><meta property="og:image" content="https://lineartree.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-19T19:09:19+08:00" />
+<meta property="article:modified_time" content="2023-04-19T19:09:19+08:00" /><meta property="og:site_name" content="My New Hugo Site" />
+<meta property="og:see_also" content="https://lineartree.github.io/archlinux_notes/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://lineartree.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Arch Linux Installation"/>
+<meta name="twitter:description" content="Arch Linux Installation Steps."/>
+<meta name="application-name" content="DoIt">
+<meta name="apple-mobile-web-app-title" content="DoIt">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://lineartree.github.io/archlinux_installation/" /><link rel="next" href="https://lineartree.github.io/archlinux_notes/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Arch Linux Installation",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/lineartree.github.io\/archlinux_installation\/"
+        },"genre": "posts","keywords": "Arch Linux, installation","wordcount":  576 ,
+        "url": "https:\/\/lineartree.github.io\/archlinux_installation\/","datePublished": "2023-04-19T19:09:19+08:00","dateModified": "2023-04-19T19:09:19+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Lineartree"
+            },"description": ""
+    }
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('dark' === 'light' || 'dark' === 'dark' || 'dark' === 'black') setTheme('dark'), saveTheme('dark'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My Notes</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/series/"> Series </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search Titles or Contents" id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" class="menu-item theme-select" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="Switch Theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="black">Black</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My Notes</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search Titles or Contents" id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/series/" title="">Series</a><a href="#" class="menu-item theme-select" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="Switch Theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="black">Black</option>
+                    <option value="auto">Auto</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#config-before-installation">Config Before Installation</a></li>
+    <li><a href="#partition">Partition</a>
+      <ul>
+        <li><a href="#uefi-system">UEFI System</a></li>
+        <li><a href="#non-uefi-system">Non-UEFI System</a></li>
+      </ul>
+    </li>
+    <li><a href="#mount-to-mnt">Mount to /mnt</a></li>
+    <li><a href="#set-time-and-locale">Set Time and Locale</a></li>
+    <li><a href="#install-grub-boot-loader">Install Grub Boot Loader</a>
+      <ul>
+        <li><a href="#uefi-system-1">UEFI System</a></li>
+        <li><a href="#non-uefi-system-1">Non-UEFI System</a></li>
+      </ul>
+    </li>
+    <li><a href="#add-user">Add User</a></li>
+    <li><a href="#install-networkmanager">Install NetworkManager</a></li>
+    <li><a href="#install-yay-aur-helper">Install Yay AUR Helper</a></li>
+    <li><a href="#install-i3-and-display-manager">Install i3 and Display Manager</a>
+      <ul>
+        <li><a href="#lightdm">Lightdm</a></li>
+        <li><a href="#sddm">SDDM</a></li>
+        <li><a href="#i3">i3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Arch Linux Installation</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Lineartree</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/arch-linux/"><i class="far fa-folder fa-fw"></i>Arch Linux</a></span>&nbsp;<span class="post-category">and</span>&nbsp;<span class="post-series">series <a href="/series/archlinux-installation/"><i class="far fa-list-alt fa-fw"></i>Arch Linux Installation</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-19">2023-04-19</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-04-19">2023-04-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;576 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details series-nav open">
+                                <div class="details-summary series-title">
+                                    <span>Series - Arch Linux Installation</span>
+                                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                                </div>
+                                <div class="details-content series-content">
+                                    <nav>
+                                        <ul>
+                                                    <li><a href="/archlinux_notes/">Archlinux notes</a></li><li><span class="active">Arch Linux Installation</span></li></ul>
+                                    </nav>
+                                </div>
+                            </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#config-before-installation">Config Before Installation</a></li>
+    <li><a href="#partition">Partition</a>
+      <ul>
+        <li><a href="#uefi-system">UEFI System</a></li>
+        <li><a href="#non-uefi-system">Non-UEFI System</a></li>
+      </ul>
+    </li>
+    <li><a href="#mount-to-mnt">Mount to /mnt</a></li>
+    <li><a href="#set-time-and-locale">Set Time and Locale</a></li>
+    <li><a href="#install-grub-boot-loader">Install Grub Boot Loader</a>
+      <ul>
+        <li><a href="#uefi-system-1">UEFI System</a></li>
+        <li><a href="#non-uefi-system-1">Non-UEFI System</a></li>
+      </ul>
+    </li>
+    <li><a href="#add-user">Add User</a></li>
+    <li><a href="#install-networkmanager">Install NetworkManager</a></li>
+    <li><a href="#install-yay-aur-helper">Install Yay AUR Helper</a></li>
+    <li><a href="#install-i3-and-display-manager">Install i3 and Display Manager</a>
+      <ul>
+        <li><a href="#lightdm">Lightdm</a></li>
+        <li><a href="#sddm">SDDM</a></li>
+        <li><a href="#i3">i3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Arch Linux Installation Steps.</p>
+<h2 id="preparation" class="headerLink">
+    <a href="#preparation" class="header-mark"></a>Preparation</h2><p>download archlinx iso from official site, and create a live USB using etcher</p>
+<p><a href="https://www.balena.io/etcher" target="_blank" rel="noopener noreferrer">https://www.balena.io/etcher</a></p>
+<h2 id="config-before-installation" class="headerLink">
+    <a href="#config-before-installation" class="header-mark"></a>Config Before Installation</h2><p>make terminal font bigger</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /usr/share/kbd/consolefonts/
+</span></span><span class="line"><span class="cl">setfont ter-d20b.psf.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>/etc/makepkg.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-pkgconfig" data-lang="pkgconfig"><span class="line"><span class="cl"><span class="na">MAKEFLAGS</span><span class="o">=</span>&#34;-j$(expr $(nproc) \+ 1)&#34;<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>/etc/pacman.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">Color</span>
+</span></span><span class="line"><span class="cl"><span class="na">ParallelDownloads</span> <span class="o">=</span> <span class="s">5</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-pacmanconf" data-lang="pacmanconf"><span class="line"><span class="cl"><span class="k">[core]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Server</span> <span class="o">=</span> http://archlinux.cs.nctu.edu.tw/<span class="nv">$repo</span>/os/<span class="nv">$arch</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Include</span> <span class="o">=</span> /etc/pacman.d/mirrorlist<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">
+</span></span></span><span class="line"><span class="cl"><span class="k">[extra]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Server</span> <span class="o">=</span> http://archlinux.cs.nctu.edu.tw/<span class="nv">$repo</span>/os/<span class="nv">$arch</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Include</span> <span class="o">=</span> /etc/pacman.d/mirrorlist<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c1">#[community-testing]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c1">#Include = /etc/pacman.d/mirrorlist</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">
+</span></span></span><span class="line"><span class="cl"><span class="k">[community]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Server</span> <span class="o">=</span> http://archlinux.cs.nctu.edu.tw/<span class="nv">$repo</span>/os/<span class="nv">$arch</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Include</span> <span class="o">=</span> /etc/pacman.d/mirrorlist<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -Syy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="partition" class="headerLink">
+    <a href="#partition" class="header-mark"></a>Partition</h2><h3 id="uefi-system" class="headerLink">
+    <a href="#uefi-system" class="header-mark"></a>UEFI System</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fdisk -l
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">device     Size  ID Type
+</span></span><span class="line"><span class="cl">/dev/sda1  512M  ef EFI <span class="o">(</span>FAT-12/16/32<span class="o">)</span>
+</span></span><span class="line"><span class="cl">/dev/sda2    4G  <span class="m">82</span> Linux Swap /Solaris
+</span></span><span class="line"><span class="cl">/dev/sda3 35.5G  <span class="m">83</span> Linux
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.fat -F32 /dev/sda1
+</span></span><span class="line"><span class="cl">mkswap /dev/sda2
+</span></span><span class="line"><span class="cl">swapon /dev/sda2
+</span></span><span class="line"><span class="cl">mkfs.ext4 /dev/sda3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="non-uefi-system" class="headerLink">
+    <a href="#non-uefi-system" class="header-mark"></a>Non-UEFI System</h3><p>Creating filesystem for non-UEFI system
+For non-UEFI system, you only have one single root partition. So just make it ext4:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.ext4 /dev/sda1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="mount-to-mnt" class="headerLink">
+    <a href="#mount-to-mnt" class="header-mark"></a>Mount to /mnt</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda3 /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt base linux linux-firmware vim
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></span><span class="line"><span class="cl">arch-chroot /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="set-time-and-locale" class="headerLink">
+    <a href="#set-time-and-locale" class="header-mark"></a>Set Time and Locale</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/Asia/Taipei /etc/localtime
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/locale.gen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># uncomment this line</span>
+</span></span><span class="line"><span class="cl">en_US.UTF-8 UTF-8
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locale-gen
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8 &gt; /etc/locale.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>the name is the computer&rsquo;s name</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> myarch &gt; /etc/hostname
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hosts
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">127.0.0.1 localhost</span>
+</span></span><span class="line"><span class="cl"><span class="na">::1 localhost</span>
+</span></span><span class="line"><span class="cl"><span class="na">127.0.1.1 myarch</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-grub-boot-loader" class="headerLink">
+    <a href="#install-grub-boot-loader" class="header-mark"></a>Install Grub Boot Loader</h2><h3 id="uefi-system-1" class="headerLink">
+    <a href="#uefi-system-1" class="header-mark"></a>UEFI System</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S grub efibootmgr
+</span></span><span class="line"><span class="cl">mkdir /boot/efi
+</span></span><span class="line"><span class="cl">mount /dev/sda1 /boot/efi
+</span></span><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --bootloader-id<span class="o">=</span>GRUB --efi-directory<span class="o">=</span>/boot/efi
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="non-uefi-system-1" class="headerLink">
+    <a href="#non-uefi-system-1" class="header-mark"></a>Non-UEFI System</h3><p>Install grub on Non-UEFI systems
+Install grub package first:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pacman -S grub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And then install grub like this (don’t put the disk number sda1, just the disk name sda):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">grub-install /dev/sda
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Last step:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="add-user" class="headerLink">
+    <a href="#add-user" class="header-mark"></a>Add User</h2><p>the name is the user&rsquo;s name</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S sudo
+</span></span><span class="line"><span class="cl">useradd -m lpy
+</span></span><span class="line"><span class="cl">passwd lpy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">usermod -aG wheel,audio,video,storage lpy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>uncomment this line</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## Uncomment to allow members of group wheel to execute any command</span>
+</span></span><span class="line"><span class="cl">%wheel <span class="nv">ALL</span><span class="o">=(</span>ALL:ALL<span class="o">)</span> ALL
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-networkmanager" class="headerLink">
+    <a href="#install-networkmanager" class="header-mark"></a>Install NetworkManager</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S networkmanager
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> NetworkManager.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>or</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount -l /mnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">shutdown now
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Set config after installation<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>config terminal fonts</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S terminus-font
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /usr/share/kbd/consolefonts/
+</span></span><span class="line"><span class="cl">setfont ter-d20b.psf.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>/etc/vconsole.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FONT=ter-d20b.psf.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>/etc/makepkg.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">MAKEFLAGS</span><span class="o">=</span><span class="s">&#34;-j$(expr $(nproc) \+ 1)&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>in <code>/etc/pacman.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-pacmanconf" data-lang="pacmanconf"><span class="line"><span class="cl"><span class="na">Color</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">ParallelDownloads</span> <span class="o">=</span> 5<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-pacmanconf" data-lang="pacmanconf"><span class="line"><span class="cl"><span class="k">[core]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Server</span> <span class="o">=</span> http://archlinux.cs.nctu.edu.tw/<span class="nv">$repo</span>/os/<span class="nv">$arch</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Include</span> <span class="o">=</span> /etc/pacman.d/mirrorlist<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">
+</span></span></span><span class="line"><span class="cl"><span class="k">[extra]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Server</span> <span class="o">=</span> http://archlinux.cs.nctu.edu.tw/<span class="nv">$repo</span>/os/<span class="nv">$arch</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Include</span> <span class="o">=</span> /etc/pacman.d/mirrorlist<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c1">#[community-testing]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c1">#Include = /etc/pacman.d/mirrorlist</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">
+</span></span></span><span class="line"><span class="cl"><span class="k">[community]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Server</span> <span class="o">=</span> http://archlinux.cs.nctu.edu.tw/<span class="nv">$repo</span>/os/<span class="nv">$arch</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="na">Include</span> <span class="o">=</span> /etc/pacman.d/mirrorlist<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="install-yay-aur-helper" class="headerLink">
+    <a href="#install-yay-aur-helper" class="header-mark"></a>Install Yay AUR Helper</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -Syy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>copy github ip to <code>/etc/hosts</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">140.82.114.3 github.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S base-devel git
+</span></span><span class="line"><span class="cl">git clone https://aur.archlinux.org/yay.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> yay
+</span></span><span class="line"><span class="cl">makepkg -si
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-i3-and-display-manager" class="headerLink">
+    <a href="#install-i3-and-display-manager" class="header-mark"></a>Install i3 and Display Manager</h2><h3 id="lightdm" class="headerLink">
+    <a href="#lightdm" class="header-mark"></a>Lightdm</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S lightdm lightdm-webkit2-greeter
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> lightdm.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>theme</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S lightdm-webkit-theme-aether
+</span></span><span class="line"><span class="cl">yay -R lightdm-webkit-theme-aether
+</span></span><span class="line"><span class="cl">yay -S lightdm-webkit-theme-aether-git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="sddm" class="headerLink">
+    <a href="#sddm" class="header-mark"></a>SDDM</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S sddm
+</span></span><span class="line"><span class="cl">yay -S sddm-sugar-dark
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> sddm.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>view themes in <code>/usr/share/sddm/themes</code></p>
+<p>in <code>/etc/sddm.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Theme]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Current</span><span class="o">=</span><span class="s">sugar-dark</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>disable showing password when typing</p>
+<p>in <code>/usr/share/sddm/themes/sugar-dark/theme.conf</code></p>
+<p>set <code>ForceHideCompletePassword</code> to <code>true</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">ForceHideCompletePassword</span><span class="o">=</span><span class="s">true</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## If you don&#39;t like to see any character at all not even while being entered set this to true.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="i3" class="headerLink">
+    <a href="#i3" class="header-mark"></a>i3</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S i3 xorg xorg-server alacritty kitty rofi
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xdg-user-dirs
+</span></span><span class="line"><span class="cl">xdg-user-dirs-update
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        
+
+
+<h2>Related Content</h2>
+<div class="related-container">
+    <div class="related-item-container">
+            <h2 class="related-title">
+                <a href="/archlinux_notes/">Archlinux notes</a>
+            </h2>
+        </div>
+    
+
+</div>
+
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-19</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/archlinux_installation/index.md target="_blank" rel="noopener noreferrer">Read markdown</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/arch-linux/">Arch Linux</a>,&nbsp;<a href="/tags/installation/">installation</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/archlinux_notes/" class="next" rel="next" title="Archlinux notes">Archlinux notes<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Lineartree</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":30},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>
